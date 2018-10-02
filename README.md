@@ -39,8 +39,13 @@ Objects can also be used as return types. You can imagine that this allows us to
 
 ```cpp
 point get_middle(point p1, point p2) {
-  int mid_x = p2.x() - p1.x();
-  int mid_y = p2.y() - p1.y();
+  // Find distance between p1 and p2's x coordinates to find the middle and add
+  // to the starting point to find the midpoint
+  int mid_x = (p2.x() - p1.x()) / 2 + p1.x();
+
+  // Use the same formula as above by use y coordinates
+  int mid_y = (p2.y() - p1.y()) /2 + p1.y();
+
   point mid_point;
   mid_point.set_x(mid_x);
   mid_point.set_y(mid_y);
