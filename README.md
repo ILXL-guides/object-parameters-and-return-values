@@ -14,18 +14,19 @@ public:
 
 void display_horizontal_distance(point p1, point p2) {
   int distance = p1.x() - p2.x();
-  cout << "The horizontal distance between the two points is: " << distance;
+  cout << "The horizontal distance between the two points is: "
+       << distance << "\n";
 }
 
 int main() {
   point start, end;
   start.set_x(3);
   start.set_y(4);
-  
+
   end.set_x(6);
   end.set_y(4);
-  
-  display_horizontal_distance(start, end);
+
+  display_horizontal_distance(end, start);
   return 0;
 }
 
@@ -50,10 +51,10 @@ int main() {
   point start, end;
   start.set_x(3);
   start.set_y(4);
-  
+
   end.set_x(6);
   end.set_y(4);
-  
+
   point mid = get_middle(start, end);
   cout << "Mid point is at " << mid.x() << ", " << mid.y() << "\n";
   return 0;
