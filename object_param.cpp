@@ -1,24 +1,24 @@
 #include <iostream>
 using namespace std;
 
-class point {
+class Point {
 private:
-  int _x, _y;
+  int x_, y_;
 public:
-  int x() { return _x; }
-  void set_x(int x) { _x = x; }
-  int y() { return _y; }
-  void set_y(int y) { _y = y; }
+  int x() { return x_; }
+  void set_x(int x) { x_ = x; }
+  int y() { return y_; }
+  void set_y(int y) { y_ = y; }
 };
 
-void display_horizontal_distance(point p1, point p2) {
+void display_horizontal_distance(Point p1, Point p2) {
   int distance = p1.x() - p2.x();
   cout << "The horizontal distance between the two points is: "
        << distance << "\n";
 }
 
 int main() {
-  point start, end;
+  Point start, end;
   start.set_x(3);
   start.set_y(4);
 
