@@ -1,9 +1,9 @@
 #include <iostream>
-using namespace std;
 
 class Point {
 private:
   int x_, y_;
+
 public:
   int x() { return x_; }
   void set_x(int x) { x_ = x; }
@@ -17,7 +17,7 @@ Point get_middle(Point p1, Point p2) {
   int mid_x = (p2.x() - p1.x()) / 2 + p1.x();
 
   // Use the same formula as above by use y coordinates
-  int mid_y = (p2.y() - p1.y()) /2 + p1.y();
+  int mid_y = (p2.y() - p1.y()) / 2 + p1.y();
 
   Point mid_point;
   mid_point.set_x(mid_x);
@@ -34,6 +34,6 @@ int main() {
   end.set_y(4);
 
   Point mid = get_middle(start, end);
-  cout << "Mid point is at " << mid.x() << ", " << mid.y() << "\n";
+  std::cout << "Mid point is at " << mid.x() << ", " << mid.y() << "\n";
   return 0;
 }
