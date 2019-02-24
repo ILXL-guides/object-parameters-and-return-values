@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Point {
 private:
@@ -13,7 +12,7 @@ public:
 
 void display_horizontal_distance(Point p1, Point p2) {
   int distance = p1.x() - p2.x();
-  cout << "The horizontal distance between the two points is: "
+  std::cout << "The horizontal distance between the two points is: "
        << distance << "\n";
 }
 
