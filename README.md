@@ -6,13 +6,13 @@ class Point {
 private:
   int x_, y_;
 public:
-  int x() { return x_; }
+  int x() const { return x_; }
   void set_x(int x) { x_ = x; }
-  int y() { return y_; }
+  int y() const { return y_; }
   void set_y(int y) { y_ = y; }
 };
 
-void display_horizontal_distance(Point p1, Point p2) {
+void display_horizontal_distance(const Point &p1, const Point &p2) {
   int distance = p1.x() - p2.x();
   std::cout << "The horizontal distance between the two points is: "
             << distance << "\n";
@@ -38,7 +38,7 @@ In the example above, we see that two `Point` objects are passed to the `display
 Objects can also be used as return types. You can imagine that this allows us to create objects from within the function and return them.
 
 ```cpp
-Point get_middle(Point p1, Point p2) {
+Point get_middle(const Point &p1, const Point &p2) {
   // Find distance between p1 and p2's x coordinates to find the middle and add
   // to the starting point to find the midpoint
   int mid_x = (p2.x() - p1.x()) / 2 + p1.x();
