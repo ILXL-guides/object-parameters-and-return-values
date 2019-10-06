@@ -1,5 +1,5 @@
 # Passing objects as parameters
-Objects can be passed as parameters much like how we pass primitive data types. The difference is that because an object is passed, the function also has access to its public data members and methods.
+Objects can be passed as parameters much like how we pass primitive data types. The difference is that because an object is passed, the function also has access to its public data members and member functions.
 
 ```cpp
 class Point {
